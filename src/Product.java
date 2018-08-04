@@ -10,10 +10,6 @@ public class Product {
         this.price = price;
     }
 
-    public Product( String product){
-
-    }
-
     public String getName() {
         return name;
     }
@@ -40,6 +36,11 @@ public class Product {
 
     @Override
     public String toString() {
-        return  name + ';' + producer + ';' + price;
+        return name + ';' + producer + ';' + price;
     }
+
 }
+
+
+
+

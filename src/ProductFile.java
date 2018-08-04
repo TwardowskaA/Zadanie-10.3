@@ -17,19 +17,25 @@ public class ProductFile {
 
         Product[] pro = new Product[3];
 
-            try (Scanner scan = new Scanner(file)) {
-                while (scan.hasNextLine()) {
+        try (Scanner scan = new Scanner(file)) {
 
-                    String[] product = scan.nextLine().split(";");
-                    for (int i = 0; i < product.length; i++) {
-                        pro[1] = new Product(product[1]);
-                    }
+            String[] product = scan.nextLine().split(";");
+            pro[0] = new Product(product[0], product[1], Double.valueOf(product[2]));
 
-                }
-            }
-        System.out.println(Arrays.toString(pro));
+            String[] product1 = scan.nextLine().split(";");
+            pro[1] = new Product(product1[0], product1[1], Double.valueOf(product1[2]));
+
+            String[] product2 = scan.nextLine().split(";");
+            pro[2] = new Product(product2[0], product2[1], Double.valueOf(product2[2]));
+
+
         }
     }
+
+}
+
+
+
 
 
 
