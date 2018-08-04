@@ -3,7 +3,6 @@ public class Product {
     private String producer;
     private double price;
 
-
     public Product(String name, String producer, double price) {
         this.name = name;
         this.producer = producer;

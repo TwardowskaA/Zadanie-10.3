@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -27,10 +28,13 @@ public class ProductFile {
 
             String[] product2 = scan.nextLine().split(";");
             pro[2] = new Product(product2[0], product2[1], Double.valueOf(product2[2]));
-
-
+            
         }
+
+        System.out.println(Metody.sum(pro));
+        System.out.println(Metody.mostExpensive(pro));
     }
+
 
 }
 
