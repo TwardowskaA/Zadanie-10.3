@@ -1,18 +1,22 @@
 public class Metody {
 
     public static double sum(Product[] pro) {
-        return pro[0].getPrice() + pro[1].getPrice() + pro[2].getPrice();
+        double sum = 0;
+        for (int i = 0; i < pro.length; i++) {
+            sum = sum + pro[i].getPrice();
+        }
+        return sum;
+    }
+
+    public static double mostExpensive(Product[] pro) {
+        
+        double result = pro[0].getPrice();
+        for (int i = 0; i < pro.length; i++) {
+            if (result < pro[i].getPrice())
+                result = pro[i].getPrice();
+
+        } return result;
 
     }
 
-    public static Product mostExpensive(Product[] pro) {
-        if (pro[0].getPrice() > pro[1].getPrice() && pro[0].getPrice() > pro[2].getPrice())
-            return pro[0];
-        else if (pro[1].getPrice() > pro[0].getPrice() && pro[1].getPrice() > pro[2].getPrice())
-            return pro[1];
-        else if (pro[2].getPrice() > pro[1].getPrice() && pro[2].getPrice() > pro[0].getPrice())
-            return pro[2];
-
-        return null;
-    }
 }
