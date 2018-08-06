@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ProductFile {
@@ -19,14 +20,13 @@ public class ProductFile {
 
         try (Scanner scan = new Scanner(file)) {
 
-            String[] product = scan.nextLine().split(";");
-            pro[0] = new Product(product[0], product[1], Double.valueOf(product[2]));
-            String[] product1 = scan.nextLine().split(";");
-            pro[1] = new Product(product1[0], product1[1], Double.valueOf(product1[2]));
-            String[] product2 = scan.nextLine().split(";");
-            pro[2] = new Product(product2[0], product2[1], Double.valueOf(product2[2]));
+            for (int i = 0; i < pro.length ; i++) {
+                String[] product = scan.nextLine().split(";");
+                pro[i] = new Product(product[0], product[1],Double.valueOf(product[2]));
+            }
 
         }
+        System.out.println(Arrays.toString(pro));
 
         System.out.println(Metody.sum(pro));
         System.out.println(Metody.mostExpensive(pro));
