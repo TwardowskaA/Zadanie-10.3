@@ -8,14 +8,16 @@ public class Metody {
         return sum;
     }
 
-    public static double mostExpensive(Product[] pro) {
-        
+    public static Product mostExpensive(Product[] pro) {
+        Product product = pro[0];
         double result = pro[0].getPrice();
         for (int i = 0; i < pro.length; i++) {
-            if (result < pro[i].getPrice())
+            if (result < pro[i].getPrice()) {
+                product = pro[i];
                 result = pro[i].getPrice();
+            }
 
-        } return result;
+        } return product;
 
     }
 

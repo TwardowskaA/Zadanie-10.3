@@ -21,7 +21,6 @@ public class ProductFile {
 
             String[] product = scan.nextLine().split(";");
             pro[0] = new Product(product[0], product[1], Double.valueOf(product[2]));
-
             String[] product1 = scan.nextLine().split(";");
             pro[1] = new Product(product1[0], product1[1], Double.valueOf(product1[2]));
             String[] product2 = scan.nextLine().split(";");
